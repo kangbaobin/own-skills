@@ -1,9 +1,9 @@
 ---
-name: go-commit
+name: git-commit
 description: "Git 提交助手：执行 git add -u 暂存变更，分析 diff 内容，自动生成 Conventional Commits 规范的中文提交信息并执行 git commit。当用户要求提交代码、生成 commit message、执行 git commit、暂存并提交、或者说'提交一下'、'commit'、'帮我提交'时触发此技能。即使用户没有明确提到 Conventional Commits，只要涉及 git 提交相关操作都应使用此技能。"
 ---
 
-# Go Commit — Git 智能提交助手
+# Git Commit — Git 智能提交助手
 
 一个自动化的 git 提交工作流：暂存已跟踪文件的变更、分析 diff、生成规范的中文 commit message、执行提交。
 
@@ -35,6 +35,7 @@ git add -u
 ```bash
 git diff --staged --stat
 ```
+注意：按提交流程检查工作区和本次改动范围，也需要留意和这次代码修改直接相关的未跟踪文件；如果存在和这次代码修改相关的变更，也需要把新增文件一并纳入提交，避免漏提，同时其它未跟踪文件保持不动，避免误带进本次提交。
 
 ### 第三步：分析变更内容
 
